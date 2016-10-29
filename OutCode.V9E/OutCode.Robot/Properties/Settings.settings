@@ -1,0 +1,24 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="OutCode.Robot.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="PDFDOCPATH" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">w:\files\</Value>
+    </Setting>
+    <Setting Name="SIGNREADPATH" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">w:\FILES\ToSIGN\</Value>
+    </Setting>
+    <Setting Name="SIGNDESTPATH" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">w:\FILES\SIGNED\</Value>
+    </Setting>
+    <Setting Name="SENDMAILPATH" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">w:\FILES\SENDMAIL\</Value>
+    </Setting>
+    <Setting Name="DEBUG" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="TimerInterval" Type="System.Decimal" Scope="Application">
+      <Value Profile="(Default)">0.1</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

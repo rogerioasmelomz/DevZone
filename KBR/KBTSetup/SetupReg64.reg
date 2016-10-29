@@ -1,0 +1,13 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\PRIMAVERA\SGE900\Default\KBT]
+"Audit"="KBTAudit900"
+"3rdParty"="TRUE"
+"Forms"="KBTForms900"
+"Nome"="Business Tools"
+"PercursoApl"="C:\\Program Files\\PRIMAVERA\\SG900\\APL\\"
+"PercursoDados"="C:\\Program Files\\PRIMAVERA\\SG900\\DADOS\\LE\\"
+"PercursoDadosComuns"="C:\\Program Files\\PRIMAVERA\\SG900\\DADOS\\"
+"PercursoMapas"="C:\\Program Files\\PRIMAVERA\\SG900\\MAPAS\\LE\\GCP\\"
+"Versao"="900"
+"Exec"="Ext3rdParty"

@@ -9,7 +9,7 @@ namespace Core.Security
     public interface ILicenca
     {
 
-        void MakeLic(string A);
+        void MakeLic(string A, int O);
 
     }
 }

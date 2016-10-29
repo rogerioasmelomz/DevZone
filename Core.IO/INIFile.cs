@@ -48,4 +48,5 @@ namespace Core.IO
             return Read(Key, Section).Length > 0;
         }
     }
+
 }

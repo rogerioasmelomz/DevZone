@@ -13,33 +13,34 @@ namespace Testing
         static void Main(string[] args)
         {
 
-            IniFile ini = new IniFile("mylic.lic");
-
-            Console.WriteLine("Please enter a password to use:");
-            string password = Console.ReadLine();
+            Console.WriteLine("Please enter a NUIT to use:");
+            string nuit = Console.ReadLine();
             Console.WriteLine("Please enter a string to encrypt:");
             string plaintext = Console.ReadLine();
             Console.WriteLine("");
 
+            IniFile ini = new IniFile(String.Format("{0}.lic", nuit));
+
             Console.WriteLine("Your encrypted string is:");
-            string encryptedstring = StringCipher.Thing(plaintext, password);
+            string encryptedstring = StringCipher.Thing(plaintext, nuit);
+            string encryptedKey = StringCipher.Thing(nuit,"CSULICENSE.LIC"); 
             Console.WriteLine(encryptedstring);
             Console.WriteLine("");
 
+            ini.Write("L0", encryptedKey, "GALU");
+            ini.Write("L1", encryptedstring,"GALU"); 
 
-            ini.Write("L1", encryptedstring,"Licence"); 
+            //encryptedstring = ini.Read("L1", "Licence");
 
-            encryptedstring = ini.Read("L1", "Licence");
+            //Console.WriteLine("Your decrypted string is:");
+            //string decryptedstring = StringCipher.What (encryptedstring, password);
+            //Console.WriteLine(decryptedstring);
+            //Console.WriteLine("");
+
+            encryptedstring = ini.Read("L1","GALU");
 
             Console.WriteLine("Your decrypted string is:");
-            string decryptedstring = StringCipher.What (encryptedstring, password);
-            Console.WriteLine(decryptedstring);
-            Console.WriteLine("");
-
-            encryptedstring = ini.Read("L1");
-
-            Console.WriteLine("Your decrypted string is:");
-            decryptedstring = StringCipher.What(encryptedstring, password);
+            string decryptedstring = StringCipher.What(encryptedstring, nuit);
             Console.WriteLine(decryptedstring);
             Console.WriteLine("");
 

@@ -41,9 +41,9 @@ namespace Core.Security
             _P = B;
         }
 
-        public void DoThings(ILicenca Lic) {
+        public void DoThings(ILicenca Lic, int O) {
 
-            Lic.MakeLic(this.Info );
+            Lic.MakeLic(this.Info ,O);
         }
         
         public bool IsEqual(string A) {
