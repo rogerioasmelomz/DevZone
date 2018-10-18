@@ -36,10 +36,6 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Interop.StdBE900">
-      <HintPath>C:\Program Files (x86)\Common Files\PRIMAVERA\SG900\Interop.StdBE900.dll</HintPath>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -88,25 +84,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\OutCode.Entities\OutCode.Interop.csproj">
-      <Project>{a7a6c2fd-8ef9-48b1-bbb4-03ea1b3db24d}</Project>
-      <Name>OutCode.Interop</Name>
-    </ProjectReference>
     <ProjectReference Include="..\OutCode.Net\OutCode.Net.csproj">
       <Project>{c88386c9-f424-4814-b037-640dda51e283}</Project>
       <Name>OutCode.Net</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\OutCode.V9E.BRModules\OutCode.V9E.BRModules.csproj">
-      <Project>{7e2c6fa6-d34c-4c36-9102-983462a56e0b}</Project>
-      <Name>OutCode.V9E.BRModules</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\OutCode.V9E.Core\OutCode.V9E.Core.csproj">
-      <Project>{b7b5c404-61f6-47df-9162-ddac3e8038fb}</Project>
-      <Name>OutCode.V9E.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\OutCode.V9E.Entities\OutCode.V9E.Interfaces.csproj">
-      <Project>{fba37a0d-768a-4ee1-a035-bede505a1a09}</Project>
-      <Name>OutCode.V9E.Interfaces</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

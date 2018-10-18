@@ -16,8 +16,8 @@ namespace OutCode.Net
         StreamReader sr;
         StreamWriter sw;
 
-        string hostname ="mail.outcode.pt";
-        string username = "afonso.sousa@outcode.pt";
+        string hostname ="mail.outcode.biz";
+        string username = "rogerio.melo@outcode.biz";
         Int32 serverport = 110;
         string password = "+pop-2015";
 

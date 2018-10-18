@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<simulation>
+  <sendData type="text">
+<![CDATA[USER indytest\r\n
+PASS indytest\r\n
+STAT\r\n
+QUIT\r\n
+]]>
+  </sendData>
+  <receiveData type="text">
+<![CDATA[+OK POP3 server ready <13804.1151765601@mail2.atozed.com>\n
++OK please send PASS command\n
++OK 1 messages (841 octets)\n
++OK 1 841\n
++OK POP3 server signing off\n
+]]>
+  </receiveData>
+</simulation>

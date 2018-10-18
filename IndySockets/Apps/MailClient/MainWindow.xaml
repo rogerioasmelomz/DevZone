@@ -1,0 +1,24 @@
+﻿<Window x:Class="MailClient.Window1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Window1" Height="571" Width="684">
+    <Grid>
+        <ToolBarTray Background="White" VerticalAlignment="Top">
+            <ToolBar>
+                <Button Name="buttonTestTCPServer" Click="buttonTestTCPServer_Click">TCP Server</Button>
+                <Button Name="button1" Click="button1_Click">SMTP</Button>
+                <Button Name="button2" Click="button2_Click">POP3</Button>
+            </ToolBar>
+            <ToolBar>
+                <Button Name="butnOnline" Click="butnCheckMail_Click">Online</Button>
+            </ToolBar>
+        </ToolBarTray>
+        <ListBox Margin="0,24,0,0" Name="lboxMessages" HorizontalAlignment="Left" Width="243" />
+        <Grid Margin="242,24,0,0" Name="gridHeader" Height="149" VerticalAlignment="Top">
+            <Label HorizontalAlignment="Left" Name="label1" Width="60" Height="28" VerticalAlignment="Top">Subject:</Label>
+            <Label Height="28" Margin="54,0,77,0" Name="lablSubject" VerticalAlignment="Top">&lt;Subject&gt;</Label>
+            <ListBox Margin="0,27,0,0" Name="lboxHeaders" />
+        </Grid>
+        <TextBox Margin="242,177,0,0" Name="textBody" AcceptsReturn="True" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" />
+    </Grid>
+</Window>

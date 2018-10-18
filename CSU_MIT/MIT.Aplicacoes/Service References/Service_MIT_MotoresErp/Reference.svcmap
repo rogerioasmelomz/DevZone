@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="849e2b53-766b-4f5d-a57c-d5069db5dcdd" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:61570/MIT_MotoresErp.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="MIT_MotoresErp.xsd" MetadataType="Schema" ID="d49e0a84-898c-4f60-a8b7-97701be4f341" SourceId="1" SourceUrl="http://localhost:61570/MIT_MotoresErp.svc?xsd=xsd1" />
+    <MetadataFile FileName="MIT_MotoresErp1.xsd" MetadataType="Schema" ID="a90b46dd-7041-4bdf-95f8-e1816c5db67d" SourceId="1" SourceUrl="http://localhost:61570/MIT_MotoresErp.svc?xsd=xsd0" />
+    <MetadataFile FileName="MIT_MotoresErp2.xsd" MetadataType="Schema" ID="1fa39134-c573-45c7-a0e1-826bd7a3883b" SourceId="1" SourceUrl="http://localhost:61570/MIT_MotoresErp.svc?xsd=xsd3" />
+    <MetadataFile FileName="MIT_MotoresErp3.xsd" MetadataType="Schema" ID="a9c34212-c691-4b17-a286-e586531b3e21" SourceId="1" SourceUrl="http://localhost:61570/MIT_MotoresErp.svc?xsd=xsd2" />
+    <MetadataFile FileName="MIT_MotoresErp.wsdl" MetadataType="Wsdl" ID="bb9ce0f3-16c1-4363-85e3-7371dbd7b8f0" SourceId="1" SourceUrl="http://localhost:61570/MIT_MotoresErp.svc?wsdl" />
+    <MetadataFile FileName="MIT_MotoresErp4.xsd" MetadataType="Schema" ID="63462da3-0d59-4c00-9f85-bad7b7a73a85" SourceId="1" SourceUrl="http://localhost:61570/MIT_MotoresErp.svc?xsd=xsd4" />
+    <MetadataFile FileName="MIT_MotoresErp.disco" MetadataType="Disco" ID="d37ff090-ce24-40d1-b724-4cc13bc01381" SourceId="1" SourceUrl="http://localhost:61570/MIT_MotoresErp.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

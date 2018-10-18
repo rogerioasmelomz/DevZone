@@ -1,0 +1,11 @@
+﻿<Controls:MetroWindow xmlns:Geral="clr-namespace:MIT.Aplicacoes.View.Geral" 
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:CCT_Processamento_Diferencas_Cambio="clr-namespace:MIT.Aplicacoes.CCT_Processamento_Diferencas_Cambio;assembly=MIT.Aplicacoes.CCT_Processamento_Diferencas_Cambio" x:Class="MIT.Aplicacoes.MainWindow"
+        Title="MainWindow" Height="503" Width="879"  WindowStartupLocation="CenterScreen" Icon="Resources/Images/logo/MIT.png"  Language="pt-PT">
+    <StackPanel>
+        <Geral:ParametrosGerais x:Name="ParametrosGerias" />
+
+    </StackPanel>
+</Controls:MetroWindow>

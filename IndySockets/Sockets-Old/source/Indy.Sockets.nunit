@@ -1,0 +1,9 @@
+﻿<NUnitProject>
+  <Settings activeconfig="Default" />
+  <Config name="Default" binpathtype="Auto">
+    <assembly path="build\Indy.Sockets.UnitTests.Core.dll" />
+    <assembly path="build\Indy.Sockets.UnitTests.Mail.dll" />
+    <assembly path="build\Indy.Sockets.UnitTests.Protocols.dll" />
+    <assembly path="build\Indy.Sockets.UnitTests.Web.dll" />
+  </Config>
+</NUnitProject>

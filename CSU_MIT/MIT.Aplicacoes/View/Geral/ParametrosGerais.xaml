@@ -1,0 +1,96 @@
+﻿<controls:Flyout
+    x:Class="MIT.Aplicacoes.View.Geral.ParametrosGerais"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+             mc:Ignorable="d" Header="Parametros Gerias" >
+    <controls:Flyout.Resources>
+
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.ListView.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/FlatSlider.xaml" />
+
+            </ResourceDictionary.MergedDictionaries>
+
+        </ResourceDictionary>
+    </controls:Flyout.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
+        <GroupBox Header="Dados Utilizador" Grid.Row="0">
+            <Grid >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                
+                <Label Content="Empresa Primavera:" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="0" Grid.Row="1" />
+                <TextBox  Text="{Binding XPath=@empresa , Mode=TwoWay}"  x:Name="txtCodEmp" HorizontalAlignment="Left" Grid.Column="1" Grid.Row="1" TextWrapping="Wrap" Width="200" VerticalAlignment="Top" IsEnabled="False"/>
+                <Label Content="Usuario:" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="0" Grid.Row="2" />
+                <TextBox Text="{Binding XPath=@usuario , Mode=TwoWay}"  x:Name="txtUser" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="200"  Grid.Column="1" Grid.Row="2" />
+                <Label Content="Password:" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="0" Grid.Row="3"/>
+                <!--<TextBox Text="{Binding XPath=@password , Mode=TwoWay}" x:Name="txtPassword"  Grid.Column="1" Grid.Row="3" Width="200"/>-->
+                <PasswordBox x:Name="txtPassword" Grid.Column="1" Grid.Row="3" />
+
+                <Label Content="Instancia:" HorizontalAlignment="Left"  VerticalAlignment="Top" Grid.Column="0" Grid.Row="4" />
+                <ComboBox  SelectedIndex="1" x:Name="cbInstancia" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Grid.Column="1" Grid.Row="4">
+                     <ListBoxItem Content="Executivo"/>
+                    <ListBoxItem Content="Profissional"/>
+                     
+                   
+                </ComboBox>
+
+                <Button Content="Processar" Grid.Row="5" Grid.Column="1" HorizontalAlignment="Right" Width="75" Style="{DynamicResource AccentedSquareButtonStyle}"  Click="Button_Click"/>
+
+
+
+
+            </Grid>
+
+        </GroupBox>
+
+        <GroupBox Header="Empresa Primavera" Grid.Row="1">
+            <Grid >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+
+                
+
+                <Label Grid.Row="0" Grid.Column="0" Content="Empresa Primavera:"></Label>
+                <ComboBox x:Name="cbEmpresaPri" Grid.Row="0" Grid.Column="1" >
+                    
+                </ComboBox>
+
+
+            </Grid>
+
+        </GroupBox>
+
+    </Grid>
+    
+
+</controls:Flyout>

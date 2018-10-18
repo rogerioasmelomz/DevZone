@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="VB" Debug="true" Service="WCFPRIMAACSSYS.Primavera_Accsys" CodeBehind="Primavera_Accsys.svc.vb" %>

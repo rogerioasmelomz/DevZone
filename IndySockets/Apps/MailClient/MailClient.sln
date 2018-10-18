@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MailClient", "MailClient.csproj", "{014DC504-6FB7-44B4-B357-7086C39BA42F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Indy.Sockets.Core", "..\..\source\Indy.Sockets.Core\Indy.Sockets.Core.csproj", "{04612D52-2C0B-402C-8C4F-542D6F411173}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Indy.Sockets.Mail", "..\..\source\Indy.Sockets.Mail\Indy.Sockets.Mail.csproj", "{DC831537-F744-41E3-99EA-7B910D64E520}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs01.codeplex.com/
+		SccProjectUniqueName0 = ..\\..\\source\\Indy.Sockets.Core\\Indy.Sockets.Core.csproj
+		SccProjectName0 = ../../source/Indy.Sockets.Core
+		SccLocalPath0 = ..\\..\\source\\Indy.Sockets.Core
+		SccProjectUniqueName1 = ..\\..\\source\\Indy.Sockets.Mail\\Indy.Sockets.Mail.csproj
+		SccProjectName1 = ../../source/Indy.Sockets.Mail
+		SccLocalPath1 = ..\\..\\source\\Indy.Sockets.Mail
+		SccLocalPath2 = .
+		SccProjectUniqueName3 = MailClient.csproj
+		SccLocalPath3 = .
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{014DC504-6FB7-44B4-B357-7086C39BA42F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{014DC504-6FB7-44B4-B357-7086C39BA42F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{014DC504-6FB7-44B4-B357-7086C39BA42F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{014DC504-6FB7-44B4-B357-7086C39BA42F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04612D52-2C0B-402C-8C4F-542D6F411173}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04612D52-2C0B-402C-8C4F-542D6F411173}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04612D52-2C0B-402C-8C4F-542D6F411173}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04612D52-2C0B-402C-8C4F-542D6F411173}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC831537-F744-41E3-99EA-7B910D64E520}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC831537-F744-41E3-99EA-7B910D64E520}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC831537-F744-41E3-99EA-7B910D64E520}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC831537-F744-41E3-99EA-7B910D64E520}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

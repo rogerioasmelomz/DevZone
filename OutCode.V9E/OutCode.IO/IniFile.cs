@@ -11,7 +11,7 @@ namespace OutCode.IO
 {
     public class IniFile
     {
-        string Path;
+        string FilePath;
         string EXE = Assembly.GetExecutingAssembly().GetName().Name;
 
         [DllImport("kernel32")]
@@ -22,20 +22,26 @@ namespace OutCode.IO
 
         public IniFile(string IniPath = null)
         {
-            Path = new FileInfo(IniPath ?? EXE + ".ini").FullName.ToString();
-            EVLog.Warning("IniFile:" + Path);
+            FilePath = new FileInfo(IniPath ?? EXE + ".ini").FullName.ToString();
+            EVLog.Warning("IniFile:" + FilePath);
         }
+
+        public string FileName
+        {
+            get { return (Path.GetFileName(FilePath )  ); }
+        }
+
 
         public string Read(string Key, string Section = null)
         {
             var RetVal = new StringBuilder(255);
-            GetPrivateProfileString(Section ?? EXE, Key, "", RetVal, 255, Path);
+            GetPrivateProfileString(Section ?? EXE, Key, "", RetVal, 255, FilePath);
             return RetVal.ToString();
         }
 
         public void Write(string Key, string Value, string Section = null)
         {
-            WritePrivateProfileString(Section ?? EXE, Key, Value, Path);
+            WritePrivateProfileString(Section ?? EXE, Key, Value, FilePath);
         }
 
         public void DeleteKey(string Key, string Section = null)

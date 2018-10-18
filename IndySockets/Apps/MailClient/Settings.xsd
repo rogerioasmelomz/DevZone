@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Settings" targetNamespace="http://tempuri.org/Settings.xsd" xmlns:mstns="http://tempuri.org/Settings.xsd" xmlns="http://tempuri.org/Settings.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Settings" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="Settings" msprop:Generator_UserDSName="Settings" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="POP3" msprop:Generator_UserTableName="POP3" msprop:Generator_RowDeletedName="POP3RowDeleted" msprop:Generator_TableClassName="POP3DataTable" msprop:Generator_RowChangedName="POP3RowChanged" msprop:Generator_RowClassName="POP3Row" msprop:Generator_RowChangingName="POP3RowChanging" msprop:Generator_RowEvArgName="POP3RowChangeEvent" msprop:Generator_RowEvHandlerName="POP3RowChangeEventHandler" msprop:Generator_TablePropName="POP3" msprop:Generator_TableVarName="tablePOP3" msprop:Generator_RowDeletingName="POP3RowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Host" msprop:Generator_UserColumnName="Host" msprop:Generator_ColumnPropNameInRow="Host" msprop:Generator_ColumnVarNameInTable="columnHost" msprop:Generator_ColumnPropNameInTable="HostColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="User" msprop:Generator_UserColumnName="User" msprop:Generator_ColumnPropNameInRow="User" msprop:Generator_ColumnVarNameInTable="columnUser" msprop:Generator_ColumnPropNameInTable="UserColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Password" msprop:Generator_UserColumnName="Password" msprop:Generator_ColumnPropNameInRow="Password" msprop:Generator_ColumnVarNameInTable="columnPassword" msprop:Generator_ColumnPropNameInTable="PasswordColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

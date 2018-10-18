@@ -1,0 +1,75 @@
+﻿<Window x:Class="MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:c="clr-namespace:CSU_CGA"
+    Title="MainWindow" Height="600.432" Width="1251.788">
+
+    <Window.Resources>
+        <c:Ficheiro_Controller x:Key="ListFicheiros"/>
+    </Window.Resources>
+
+    <DockPanel>
+        <ToolBarTray DockPanel.Dock="Top">
+
+            <ToolBar>
+                <Button >
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="Resources/Actualizar.png" Name="Image1" Height="27" Width="35"></Image>
+                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">Actualizar</TextBlock>
+                        
+                    </StackPanel>
+                    
+                </Button>
+
+                <Button Click="Button_Click" VerticalAlignment="Bottom" >
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="Resources/processar.png" Name="Image2" Height="27" Width="35"></Image>
+                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">Processar</TextBlock>
+
+                    </StackPanel>
+                    
+                </Button>
+                
+            </ToolBar>
+        </ToolBarTray>
+
+        <Grid Margin="0,0,2,0" Height="531" VerticalAlignment="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="43*" />
+                <ColumnDefinition Width="164*"/>
+                <ColumnDefinition Width="207*" />
+
+            </Grid.ColumnDefinitions>
+
+            <ListView  x:Name="listViewFolder" ItemsSource="{DynamicResource ListFicheiros}" HorizontalAlignment="Left" Height="419" Margin="10,102,0,0" VerticalAlignment="Top" Width="537" SelectedIndex="0" Grid.ColumnSpan="2" >
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn>
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <CheckBox  Tag="{Binding Sel}" IsChecked="{Binding Sel,Mode=TwoWay}" />
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding Sel }" Header="Selecionado" Width="75" />
+                        <GridViewColumn DisplayMemberBinding="{Binding cam}" Header="Ficheiro" Width="250" />
+                    </GridView>
+                </ListView.View>
+
+            </ListView>
+            <ComboBox x:Name="cbFicheiro" HorizontalAlignment="Left" Margin="222,12,0,0" VerticalAlignment="Top" Width="196" SelectionChanged="ComboBox_SelectionChanged" Grid.Column="1">
+                <ListBoxItem Content="Por Importar"/>
+                <ListBoxItem Content="Importado"/>
+                <ListBoxItem Content="Erro de Importação"/>
+                <ListBoxItem Content="Cancelados"/>
+            </ComboBox>
+
+            <TextBox x:Name="txtTexto" HorizontalAlignment="Left" Height="423" Margin="10,98,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="580" IsEnabled="False" Grid.Column="2" />
+            <DatePicker x:Name="dtInicio" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+            <DatePicker x:Name="dtFim" HorizontalAlignment="Left" Margin="28,10,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+
+        </Grid>
+    </DockPanel>
+
+
+</Window>

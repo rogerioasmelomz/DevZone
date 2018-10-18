@@ -1,0 +1,137 @@
+<?xml version="1.0"?>
+<!-- this file depends on having Clover.NET installed. Contact Matthijs ter Woord for the license key. Indy has a license for it -->
+<project xmlns="http://nant.sourceforge.net/schemas/nant-0.85.xsd"
+				 name="NApf"
+				 default="IntegrationBuild">
+	<target name="IntegrationBuild">
+		<fail if="${not property::exists('ENV.CloverNETFolder')}" message="property &quot;ENV.CloverNETFolder&quot; has not been set!"/>
+		<property name="project.basedir" value="${project::get-base-directory()}"/>
+		<property name="project.builddir" value="${path::combine(project.basedir, 'build')}"/>
+		<!--<delete dir="${project.builddir}" if="${directory::exists(project.builddir)}"/>-->
+		<property name="project.integrationdir" value="${path::combine(project.basedir, 'integrationbuild')}"/>
+		<!-- <fail message="Integration directory already exists!" if="${directory::exists(project.integrationdir)}"/> -->
+		<delete dir="${project.integrationdir}" if="${directory::exists(project.integrationdir)}"/>
+		<delete>
+			<fileset basedir="${project.basedir}">
+				<include name="Indy.Sockets.UnitTests.*-results.xml"/>
+				<include name="CloverOutput.xml"/>
+			</fileset>
+		</delete>
+		<mkdir dir="${project.integrationdir}"/>
+		<msbuild project="${path::combine(project.basedir, 'Indy.Sockets.sln')}" target="Clean" verbosity="Minimal"/>
+		<copy todir="${project.integrationdir}">
+			<fileset basedir="${project.basedir}">
+				<include name="**/*.*"/>
+				<exclude name="build/**/*.*"/>
+				<exclude name="CloverOutputHtml/**/*.*"/>
+			</fileset>
+		</copy>
+		<attrib readonly="false">
+			<fileset basedir="${project.integrationdir}">
+				<include name="**/*.*"/>
+			</fileset>
+		</attrib>
+		<property name="project.IntegrationBuildDir" value="${path::combine(project.integrationdir, 'build')}"/>
+		<mkdir dir="${project.IntegrationBuildDir}"/>
+		
+		<script language="C#">
+			<code>
+				<![CDATA[
+							// convert the .csproj files to also reference the Clover runtime.
+							public static void ScriptMain(Project project)
+							{
+								foreach(string s in Directory.GetFiles(project.Properties["project.integrationdir"], "*.csproj", SearchOption.AllDirectories))
+								{
+								  if (s.StartsWith(Path.Combine(project.Properties["project.integrationdir"], "Tests"), StringComparison.InvariantCultureIgnoreCase)){
+													continue;
+									}
+									string fileContents = File.ReadAllText(s);
+									fileContents = fileContents.Replace("<Reference Include=\"System\" />", 
+													 "<Reference Include=\"CloverRuntime\">\r\n<SpecificVersion>False</SpecificVersion>\r\n<HintPath>" + Path.Combine(project.Properties["ENV.CloverNETFolder"], "CloverRuntime.dll") + " </HintPath>\r\n</Reference>\r\n<Reference Include=\"System\" />");
+									File.WriteAllText(s, fileContents);
+								}
+								 project.Log(Level.Info, "All projects converted");
+							}
+]]>
+			</code>
+		</script>
+		<property name="project.CloverResponseFile" value="${path::get-temp-file-name()}"/>
+		<property name="project.CloverDatabase" value="${path::combine(project.integrationdir, 'coverage.cdb')}"/>
+		<foreach item="File" property="SourceFile">
+			<in>
+				<items basedir="${project.basedir}">
+					<include name="Core/**/*.cs"/>
+					<!--<include name="Mail/**/*.cs"/>
+					<include name="Protocols/**/*.cs"/>
+					<include name="Web/**/*.cs"/>-->
+					<exclude name="integrationbuild/**/*.cs"/>
+					<exclude name="**/*Exception.cs"/>
+					<exclude name="*/bin/**/*.cs"/>
+					<exclude name="*/obj/**/*.cs"/>
+					<exclude name="**/ResourceStrings.cs"/>
+				</items>
+			</in>
+			<do>
+				<echo file="${project.CloverResponseFile}" append="true" message="${SourceFile}"/>
+			</do>
+		</foreach>
+		<exec program="${path::combine(ENV.CloverNETFolder, 'cloverinstr.exe')}">
+			<arg value="${'-i &quot;' + project.CloverDatabase + '&quot;'}"/>
+			<arg value="${'-d &quot;' + project.integrationdir + '&quot;'}"/>
+			<arg value="-clean"/>
+			<arg value="--noassign"/>
+			<arg value="${'--srcroot &quot;' + project.basedir + '&quot;'}"/>
+			<arg line="${'@&quot;' + project.CloverResponseFile + '&quot;'}"/>
+		</exec>
+		<msbuild project="${path::combine(project.integrationdir, 'Indy.Sockets.sln')}" target="Build" verbosity="Minimal">
+			<arg line="${'/p:OutputPath=&quot;' + project.IntegrationBuildDir + '&quot;'}"/>
+		</msbuild>
+		<echo message="Now start running the tests"/>
+		<nunit2 failonerror="false">
+			<formatter type="Xml" usefile="true" extension=".xml" outputdir="${project.basedir}"/>
+			<!--<test assemblyname="${path::combine(project.IntegrationBuildDir, 'Indy.Sockets.UnitTests.Core.dll')}" haltonfailure="false">
+				<categories>
+					<exclude name="NotWorking"/>
+				</categories>
+			</test>
+			<test assemblyname="${path::combine(project.IntegrationBuildDir, 'Indy.Sockets.UnitTests.Protocols.dll')}" haltonfailure="false">
+				<categories>
+					<exclude name="NotWorking"/>
+				</categories>
+			</test>
+			<test assemblyname="${path::combine(project.IntegrationBuildDir, 'Indy.Sockets.UnitTests.Mail.dll')}" haltonfailure="false">
+				<categories>
+					<exclude name="NotWorking"/>
+				</categories>
+			</test>
+			<test assemblyname="${path::combine(project.IntegrationBuildDir, 'Indy.Sockets.UnitTests.Web.dll')}" haltonfailure="false">
+				<categories>
+					<exclude name="NotWorking"/>
+				</categories>
+			</test>-->
+			
+			<test haltonfailure="false">
+				<assemblies basedir="${project.IntegrationBuildDir}">
+					<include name="Indy.Sockets.UnitTests.*.dll"/>
+				</assemblies>
+				<categories>
+					<exclude name="NotWorking" />
+        </categories>
+			</test>
+		</nunit2>
+		<exec program="${path::combine(ENV.CloverNETFolder, 'xmlreporter.exe')}">
+			<arg value="${'--output &quot;' + path::combine(project.basedir, 'CloverOutput.xml') + '&quot;'}"/>
+			<arg value="${'-i &quot;' + project.CloverDatabase + '&quot;'}"/>			
+			<arg value="--lineinfo"/>
+			<arg value="--title &quot;Indy.Sockets Test Coverage&quot;"/>
+		</exec>
+		<delete dir="${path::combine(project.basedir, 'CloverOutputHtml')}" if="${directory::exists(path::combine(project.basedir, 'CloverOutputHtml'))}"/>
+		<mkdir dir="${path::combine(project.basedir, 'CloverOutputHtml')}"/>
+		<exec program="${path::combine(ENV.CloverNETFolder, 'htmlreporter.exe')}">
+			<arg value="${'--outputdir &quot;' + path::combine(project.basedir, 'CloverOutputHtml') + '&quot;'}"/>
+			<arg value="${'-i &quot;' + project.CloverDatabase + '&quot;'}"/>
+			<arg value="--title &quot;Indy.Sockets Test Coverage&quot;"/>
+		</exec>
+		<delete dir="project.integrationdir"/>
+	</target>
+</project>

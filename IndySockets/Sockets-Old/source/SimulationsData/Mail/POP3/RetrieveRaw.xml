@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<simulation>
+  <sendData type="text">
+<![CDATA[USER indytest\r\n
+PASS indytest\r\n
+RETR 1\r\n
+QUIT\r\n
+]]>
+  </sendData>
+  <receiveData type="text">
+<![CDATA[+OK POP3 server ready <13804.1151765601@mail2.atozed.com>\n
++OK please send PASS command\n
++OK 1 messages (841 octets)\n
++OK message 1 (841 octets)\n
+Return-Path: <xxxxxxxxxxxx@atozedsoftware.com>\n
+X-Envelope-To: indytest@atozed.com\n
+Received: from xxxxxxxxxxxx ([x.x.x.x])\n
+        (authenticated user xxxxxxxx@atozedsoftware.de)\n
+        by mail2.atozed.com\n
+        for indytest@atozed.com;\n
+        Sat, 1 Jul 2006 17:14:24 +0200\n
+Message-ID: <002901c69d21$3364bf40$800101df@xxxxxxx>\n
+From: "Matthijs ter Woord" <xxxxxxx@atozedsoftware.com>\n
+To: <indytest@atozed.com>\n
+Subject: Test\n
+Date: Sat, 1 Jul 2006 17:15:21 +0200\n
+Organization: Atozed Computer Software Ltd.\n
+MIME-Version: 1.0\n
+Content-Type: text/plain;\n
+        charset="iso-8859-1"\n
+Content-Transfer-Encoding: 7bit\n
+X-Priority: 3\n
+X-MSMail-Priority: Normal\n
+X-Mailer: Microsoft Outlook Express 6.00.2800.1807\n
+Disposition-Notification-To: "Matthijs ter Woord" <xxxxxxxx@atozedsoftware.com>\n
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2800.1807\n
+\n
+Test\n
+\n
+\n
+\n
+.\n
++OK POP3 server signing off\n
+]]>
+  </receiveData>
+</simulation>

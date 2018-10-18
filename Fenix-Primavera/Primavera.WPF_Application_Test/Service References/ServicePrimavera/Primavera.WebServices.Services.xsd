@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Primavera.WebServices.Services" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Primavera.WebServices.Services" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="Contactos">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="emailAlternativo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="emailPrincipal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="localidade" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="morada" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nomeCompleto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nrTelefone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="nrTelefoneAlternativo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="primeiroNome" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tipoContacto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ultimoNome" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Contactos" nillable="true" type="tns:Contactos" />
+  <xs:complexType name="PrimaveraResultStructure">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codeLevel" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="codigo" type="xs:int" />
+      <xs:element minOccurs="0" name="descricao" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="pedentes" nillable="true" type="tns:ArrayOfPendente" />
+      <xs:element minOccurs="0" name="procedimento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="subNivel" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tipoProblema" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PrimaveraResultStructure" nillable="true" type="tns:PrimaveraResultStructure" />
+  <xs:complexType name="ArrayOfPendente">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Pendente" nillable="true" type="tns:Pendente" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPendente" nillable="true" type="tns:ArrayOfPendente" />
+  <xs:complexType name="Pendente">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DataCriacao" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DataVencimento" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Moeda" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumeroDocumento" type="xs:long" />
+      <xs:element minOccurs="0" name="SerieDocumento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ValorTotal" type="xs:double" />
+      <xs:element minOccurs="0" name="cliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tipoDocumento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="valorPendente" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Pendente" nillable="true" type="tns:Pendente" />
+  <xs:complexType name="ArrayOfArtigo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Artigo" nillable="true" type="tns:Artigo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfArtigo" nillable="true" type="tns:ArrayOfArtigo" />
+  <xs:complexType name="Artigo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="artigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="desconto" type="xs:double" />
+      <xs:element minOccurs="0" name="quantidade" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Artigo" nillable="true" type="tns:Artigo" />
+</xs:schema>

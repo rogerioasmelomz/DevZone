@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<simulation>
+  <sendData type="text">
+<![CDATA[Hello, World!\r\n]]>
+  </sendData>
+  <receiveData type="text">
+<![CDATA[Hello, World!\r\n]]>
+  </receiveData>
+</simulation>

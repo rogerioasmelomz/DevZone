@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Configuracao>
+  
+  <geral>
+    <Pastas>
+      <pasta tipo = "Geral" folder="\\file\Gestao Primavera\jvris_primavera"/>
+      <pasta tipo = "Por Importar" folder="\\file\Gestao Primavera\jvris_primavera\Por Importar"/>
+      <pasta tipo = "Importado" folder="\\file\Gestao Primavera\jvris_primavera\Importado"/>
+      <pasta tipo = "Cancelados" folder="\\file\Gestao Primavera\jvris_primavera\Cancelados"/>
+      <pasta tipo = "Erro de Importação" folder="\\file\Gestao Primavera\jvris_primavera\Erro de Importação"/>
+      <pasta tipo = "Ficheiros Exportados" folder="\\file\Gestao Primavera\jvris_primavera\Ficheiros Exportados"/>
+    </Pastas>
+    <ficheiro password=""></ficheiro>
+  </geral>
+  
+  
+  <instancias>
+    <Instancia versaoErp="V900" instancia ="1" empresa ="CGA" usuario="accsys" password ="accsys2011" instanciaSql ="ACCPRI12\PRIMAVERAV810" empresaSql ="PRICGA" usuarioSql="sa" passwordSql ="accsys2011!"/>
+  </instancias>
+
+</Configuracao>
+

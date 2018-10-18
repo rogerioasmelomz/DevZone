@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/Primavera.WebServices.Services" />
+  <xs:element name="CriarAluno">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="tipoPlataforma" type="xs:int" />
+        <xs:element minOccurs="0" name="codEmpresa" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codUtilizador" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cliente" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="nome" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="nomeFiscal" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="desconto" type="xs:float" />
+        <xs:element minOccurs="0" name="facMorada" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="facLocalidade" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="facNrTelefone" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="nuit" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="vendedor" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="observacao" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cdu_bolsa" type="xs:boolean" />
+        <xs:element minOccurs="0" name="cdu_geraMulta" type="xs:boolean" />
+        <xs:element minOccurs="0" name="cdu_tipoIngresso" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cdu_codLic" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cdu_turma" nillable="true" type="xs:string" />
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Primavera.WebServices.Services" minOccurs="0" name="contacto" nillable="true" type="q1:Contactos" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CriarAlunoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Primavera.WebServices.Services" minOccurs="0" name="CriarAlunoResult" nillable="true" type="q2:PrimaveraResultStructure" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarAluno">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="tipoPlataforma" type="xs:int" />
+        <xs:element minOccurs="0" name="codEmpresa" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codUtilizador" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cliente" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="novoNrCliente" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="nome" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="nomeFiscal" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="desconto" type="xs:float" />
+        <xs:element minOccurs="0" name="facMorada" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="facLocalidade" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="facNrTelefone" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="nuit" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="vendedor" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="observacao" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cdu_bolsa" type="xs:boolean" />
+        <xs:element minOccurs="0" name="cdu_geraMulta" type="xs:boolean" />
+        <xs:element minOccurs="0" name="cdu_tipoIngresso" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cdu_codLic" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cdu_turma" nillable="true" type="xs:string" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Primavera.WebServices.Services" minOccurs="0" name="contacto" nillable="true" type="q3:Contactos" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarAlunoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Primavera.WebServices.Services" minOccurs="0" name="ActualizarAlunoResult" nillable="true" type="q4:PrimaveraResultStructure" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CriarFactura">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="tipoPlataforma" type="xs:int" />
+        <xs:element minOccurs="0" name="codEmpresa" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codUtilizador" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="nomeUtilizador" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cliente" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tipoDoc" nillable="true" type="xs:string" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Primavera.WebServices.Services" minOccurs="0" name="listaArtigos" nillable="true" type="q5:ArrayOfArtigo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CriarFacturaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Primavera.WebServices.Services" minOccurs="0" name="CriarFacturaResult" nillable="true" type="q6:PrimaveraResultStructure" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CriaOuActualizarContrato">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="tipoPlataforma" type="xs:int" />
+        <xs:element minOccurs="0" name="codEmpresa" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codUtilizador" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="nomeUtilizador" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cliente" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tipoDoc" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="semestreId" nillable="true" type="xs:string" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Primavera.WebServices.Services" minOccurs="0" name="listaArtigos" nillable="true" type="q7:ArrayOfArtigo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CriaOuActualizarContratoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Primavera.WebServices.Services" minOccurs="0" name="CriaOuActualizarContratoResult" nillable="true" type="q8:PrimaveraResultStructure" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultaConta">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="tipoPlataforma" type="xs:int" />
+        <xs:element minOccurs="0" name="codEmpresa" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codUtilizador" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cliente" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultaContaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Primavera.WebServices.Services" minOccurs="0" name="ConsultaContaResult" nillable="true" type="q9:PrimaveraResultStructure" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

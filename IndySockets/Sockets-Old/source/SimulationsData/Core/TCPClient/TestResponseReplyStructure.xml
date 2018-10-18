@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<simulation>
+  <sendData type="text">
+<![CDATA[This is a sample message\r\n
+Message 2\r\n]]>
+  </sendData>
+  <receiveData type="text">
+<![CDATA[-BEGIN\r
+CODE=1\r
+\tTest Message\r
+-END\r
+-BEGIN\r
+CODE=2\r
+\tThis is a sample message\r
+-END\r]]>
+  </receiveData>
+</simulation>

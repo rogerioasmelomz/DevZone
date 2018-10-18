@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="MIT.WCF_Services.MIT_MotoresErp" CodeBehind="MIT_MotoresErp.svc.cs" %>

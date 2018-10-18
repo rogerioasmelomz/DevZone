@@ -14,6 +14,7 @@ namespace OutCode.IO
         private const string EventLog = "Application";
         private static EventLog _logger = null;
 
+
         /// <summary>
         /// Chage Event Source Name
         /// </summary>
@@ -64,6 +65,27 @@ namespace OutCode.IO
         private static void Write(EventLogEntryType entryType, string format, params object[] args)
         {
             string entry = _Format(format, args);
+
+            //StringBuilder  St;
+            //try
+            //{
+
+
+            //    StackTrace Trace = new StackTrace();
+
+            //    St = new StringBuilder();
+            //    St.AppendLine("// TRACE START");
+            //    foreach (StackFrame f in Trace.GetFrames()) {
+            //        St.AppendLine(f.GetMethod().Name    );
+            //    }
+            //    St.AppendLine("// TRACE END");
+
+            //    entry = string.Format("{1}{2}{0}", entry, St.ToString(),  Environment.NewLine);
+            //}
+            //catch (Exception)
+            //{
+            //}
+             
 
             try
             {

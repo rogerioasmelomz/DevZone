@@ -1,0 +1,110 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{330EC759-6500-4D26-B295-AA99E007615B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Indy.Sockets.Core</RootNamespace>
+    <AssemblyName>Indy.Sockets.Core</AssemblyName>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>$(OutputPath)\$(AssemblyName).xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>$(OutputPath)\$(AssemblyName).xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Command.cs" />
+    <Compile Include="CommandHandler.cs" />
+    <Compile Include="CommandHandlerList.cs" />
+    <Compile Include="CommandHandlerListText.cs" />
+    <Compile Include="CommandHandlerText.cs" />
+    <Compile Include="CommandText.cs" />
+    <Compile Include="ExplicitTLSServer.cs" />
+    <Compile Include="TcpClientCmd.cs" />
+    <Compile Include="TcpServerCmd.cs" />
+    <Compile Include="CompressorBase.cs" />
+    <Compile Include="ConnectionIntercept.cs" />
+    <Compile Include="Context.cs" />
+    <Compile Include="ContextRFC.cs" />
+    <Compile Include="TcpServerBase.cs" />
+    <Compile Include="ExplicitTLSClient.cs" />
+    <Compile Include="Global.cs" />
+    <Compile Include="HeaderList.cs" />
+    <Compile Include="LockableList.cs" />
+    <Compile Include="Reply.cs" />
+    <Compile Include="ReplyRFC.cs" />
+    <Compile Include="ResourceStrings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ResourceStrings.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Scheduler.cs" />
+    <Compile Include="SchedulerOfThread.cs" />
+    <Compile Include="SchedulerOfThreadDefault.cs" />
+    <Compile Include="ServerIntercept.cs" />
+    <Compile Include="ServerSocket.cs" />
+    <Compile Include="ServerSocketSimulator.cs" />
+    <Compile Include="ServerSocketTcp.cs" />
+    <Compile Include="ServerSocketTLS.cs" />
+    <Compile Include="Socket.cs">
+    </Compile>
+    <Compile Include="SocketSimulator.cs" />
+    <Compile Include="SocketSimulator.DataBlockReaders.cs" />
+    <Compile Include="SocketTCP.cs">
+    </Compile>
+    <Compile Include="SocketTLS.cs" />
+    <Compile Include="Task.cs" />
+    <Compile Include="TcpClient.cs">
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TcpConnection.cs" />
+    <Compile Include="TcpPorts.cs" />
+    <Compile Include="TcpServerCmdText.cs" />
+    <Compile Include="TextWriterIntercept.cs" />
+    <Compile Include="TextWriterServerIntercept.cs" />
+    <Compile Include="ThreadWithTask.cs" />
+    <Compile Include="TLSUtilities.cs" />
+    <Compile Include="Yarn.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ResourceStrings.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ResourceStrings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<configuracao>
+  <instancia>Data Source=.\PRIMAVERAV810;Initial Catalog= PRITRANSCOM;User Id= sa;Password=Accsys2011</instancia>
+  <tipoPlataforma>0</tipoPlataforma>
+  <empresa>TRANSCOM</empresa>
+  <usuario>accsys</usuario>
+  <password>accsys2011!</password>
+</configuracao>

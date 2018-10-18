@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<simulation>
+  <sendData type="text">
+<![CDATA[GET / HTTP/1.1\r\n
+Connection: close\r\n
+Host: localhost\r\n
+Accept: text/html, */*\r\n
+User-Agent: Mozilla/3.0 (compatible; Indy#)\r\n
+Proxy-Authentication: Basic Og==\r\n
+\r\n
+]]>
+  </sendData>
+  <receiveData type="text">
+<![CDATA[HTTP/1.1 200 OK\r\n
+Server: Microsoft-IIS/5.1\r\n
+X-Powered-By: ASP.NET\r\n
+Connection: close\r\n
+Content-Location: http://localhost/\r\n
+Date: Thu, 21 Dec 2006 18:36:48 GMT\r\n
+Content-Type: text/html\r\n
+Accept-Ranges: bytes\r\n
+Last-Modified: Fri, 15 Dec 2006 14:34:03 GMT\r\n
+ETag: "82596a285320c71:a10"\r\n
+Content-Length: 39\r\n
+\r\n
+<html><body>Hello, World!</body></html>
+]]>
+  </receiveData>
+</simulation>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:61570/MIT_MotoresErp.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/MIT.WCF_Services" />
+  <xs:element name="AbreEmpresaPrimavera">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="tipoPlataforma" type="xs:int" />
+        <xs:element minOccurs="0" name="codEmpresa" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codUsuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AbreEmpresaPrimaveraResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/MIT.WCF_Services" minOccurs="0" name="AbreEmpresaPrimaveraResult" nillable="true" type="q1:PrimaveraResultStructure" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Pendentes_Gravar_Diferencas_Cambio">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="tipoPlataforma" type="xs:int" />
+        <xs:element minOccurs="0" name="codEmpresa" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codUsuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="docDiferencaPositivos" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="docDiferencasNegativos" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="valor" type="xs:double" />
+        <xs:element minOccurs="0" name="entidade" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tipoEntidade" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="moeda" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="data" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Pendentes_Gravar_Diferencas_CambioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/MIT.WCF_Services" minOccurs="0" name="Pendentes_Gravar_Diferencas_CambioResult" nillable="true" type="q2:PrimaveraResultStructure" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

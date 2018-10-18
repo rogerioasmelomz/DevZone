@@ -1,0 +1,105 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{27388557-F735-44CF-A229-C18842ED4FA6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Indy.Sockets.Protocols</RootNamespace>
+    <AssemblyName>Indy.Sockets.Protocols</AssemblyName>
+    <SccProjectName>%24/IndySockets/Sockets/source/Protocols</SccProjectName>
+    <SccLocalPath>.</SccLocalPath>
+    <SccAuxPath>https://tfs01.codeplex.com</SccAuxPath>
+    <SccProvider>{4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>$(OutputPath)$(AssemblyName).xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Authentication\AuthenticationBase.cs" />
+    <Compile Include="Authentication\AuthenticationItem.cs" />
+    <Compile Include="Authentication\AuthenticationManager.cs" />
+    <Compile Include="Authentication\AuthenticationRegistry.cs" />
+    <Compile Include="Authentication\BasicAuthentication.cs" />
+    <Compile Include="Authentication\Enums.cs" />
+    <Compile Include="Authentication\Exceptions.cs" />
+    <Compile Include="Encoding\Base64.cs" />
+    <Compile Include="Encoding\BinHex4.cs" />
+    <Compile Include="Encoding\Coder.cs" />
+    <Compile Include="Encoding\Decoder00E.cs" />
+    <Compile Include="Encoding\Decoder3To4.cs" />
+    <Compile Include="Encoding\DecoderBase.cs" />
+    <Compile Include="Encoding\DecoderBinHex4.cs" />
+    <Compile Include="Encoding\DecoderBase64.cs" />
+    <Compile Include="Encoding\DecoderUUE.cs" />
+    <Compile Include="Encoding\DecoderXXE.cs" />
+    <Compile Include="Encoding\Encoder00E.cs" />
+    <Compile Include="Encoding\Encoder3To4.cs" />
+    <Compile Include="Encoding\EncoderBase.cs" />
+    <Compile Include="Encoding\EncoderBinHex4.cs" />
+    <Compile Include="Encoding\EncoderBase64.cs" />
+    <Compile Include="Encoding\EncoderUUE.cs" />
+    <Compile Include="Encoding\EncoderXXE.cs" />
+    <Compile Include="Encoding\UUE.cs" />
+    <Compile Include="Encoding\XXE.cs" />
+    <Compile Include="MimeTable.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResourceStrings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ResourceStrings.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SASL\ISASLImplementor.cs" />
+    <Compile Include="SASL\ISASLMechanism.cs" />
+    <Compile Include="SASL\SASLCollection.cs" />
+    <Compile Include="SASL\SASLCRAMMD5.cs" />
+    <Compile Include="SASL\SASLUserPassMechanism.cs" />
+    <Compile Include="URI.cs" />
+    <Compile Include="IUserPassProvider.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Core\Indy.Sockets.Core.csproj">
+      <Project>{330EC759-6500-4D26-B295-AA99E007615B}</Project>
+      <Name>Indy.Sockets.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ResourceStrings.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ResourceStrings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

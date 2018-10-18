@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<simulation>
+  <sendData type="text">
+<![CDATA[200\r\n
+Default\r\n
+.\r\n
+200\r\n
+200\r\n
+Hello, World!\r\n
+.\r\n
+200\r\n
+Bye\r\n
+.\r\n]]>
+  </sendData>
+  <receiveData type="text">
+<![CDATA[GET\r\n
+SET Hello, World!\r\n
+GET\r\n
+QUIT\r\n]]>
+  </receiveData>
+</simulation>

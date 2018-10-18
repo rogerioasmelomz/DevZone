@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>OutCode.IO</RootNamespace>
     <AssemblyName>OutCode.IO</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -52,12 +53,13 @@
     <SignAssembly>true</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyOriginatorKeyFile>OUTCODEUI.pfx</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>OUTCODEUI2.pfx</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -66,13 +68,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="ConfigFile.cs" />
+    <Compile Include="ImageUtils.cs" />
     <Compile Include="EventViewer.cs" />
     <Compile Include="IniFile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="OUTCODEUI.pfx" />
+    <None Include="OUTCODEUI2.pfx" />
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="stdole">
@@ -84,6 +88,16 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OutCode.Security\OutCode.Security.csproj">
+      <Project>{b529339c-ff74-4c1d-81a5-4d2f8a33f424}</Project>
+      <Name>OutCode.Security</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OutCode.UI\OutCode.UI.csproj">
+      <Project>{43859553-a13a-485b-bba4-11b62219e716}</Project>
+      <Name>OutCode.UI</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

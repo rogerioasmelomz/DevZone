@@ -1,0 +1,25 @@
+<project name="Indy.Sockets" xmlns="http://nant.sourceforge.net/schemas/nant-0.85.xsd">
+	<target name="IntegrationBuild">
+		<property name="BuildDir" value="${path::combine(project::get-base-directory(), 'build')}"/>
+		<!-- make sure we're doing a full build -->
+		<delete dir="${BuildDir}" if="${directory::exists(BuildDir)}"/>
+		<mkdir dir="${BuildDir}"/>
+		<msbuild project="${path::combine(project::get-base-directory(), 'Indy.Sockets.sln')}"
+						 verbosity="Minimal" target="Rebuild">
+			<arg value="${'/p:OutputPath=&quot;' + BuildDir + '&quot;'}"/>
+		</msbuild>
+		<exec program="${ENV.NCoverExecutable}"
+					 workingdir="${BuildDir}">
+			<arg value="${'//w &quot;' + project::get-base-directory() + '&quot;'}" />
+			<arg value="//a &quot;Indy.Sockets.Core;Indy.Sockets.Mail;Indy.Sockets.Protocols;Indy.Sockets.Web&quot;" />
+			<arg value="//ea &quot;System.CodeDom.Compiler.GeneratedCodeAttribute;System.Runtime.CompilerServices.CompilerGeneratedAttribute&quot;"/>
+			<arg value="${'//x &quot;' + path::combine(project::get-base-directory(), 'Coverage.xml') + '&quot;'}"/>
+			<arg value="${'&quot;' + ENV.NUnitExecutable + '&quot;'}" />
+			<arg value="${path::combine(BuildDir, 'Indy.Sockets.UnitTests.Core.dll')}"/>
+			<arg value="${path::combine(BuildDir, 'Indy.Sockets.UnitTests.Mail.dll')}"/>
+			<arg value="${path::combine(BuildDir, 'Indy.Sockets.UnitTests.Protocols.dll')}"/>
+			<arg value="${path::combine(BuildDir, 'Indy.Sockets.UnitTests.Web.dll')}"/>
+			<arg value="${'/xml=' + path::combine(project::get-base-directory(), 'testresults.xml')}"/>
+		</exec>
+	</target>
+</project>

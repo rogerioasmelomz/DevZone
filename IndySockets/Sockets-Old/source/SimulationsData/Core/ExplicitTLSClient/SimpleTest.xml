@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<simulation>
+  <sendData type="text">
+<![CDATA[Hello, Unsecure World!\r\n
+<<STARTTLS>>
+Hello, Secure World!\r\n
+<<STOPTLS>>
+Hello, Unsecure World!\r\n
+<<STARTTLS>>
+Hello, Secure World!\r\n]]>
+  </sendData>
+  <receiveData type="text">
+<![CDATA[Done\r\n]]>
+  </receiveData>
+</simulation>

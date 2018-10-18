@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<simulation>
+  <receiveData type="text">
+<![CDATA[GET /index HTTP/1.1\r\n
+Connection: close\r\n
+Host: localhost:888\r\n
+Accept: text/html, */*\r\n
+User-Agent: Mozilla/3.0 (compatible; Indy#)\r\n
+Proxy-Authentication: Basic Og==\r\n
+\r\n
+]]>
+  </receiveData>
+  <sendData type="text">
+<![CDATA[HTTP/1.1 200 OK\r\n
+Connection: close\r\n
+Content-Type: text/html\r\nContent-Length: 73\r\n
+Server: Indy.NET/1.0\r\n
+\r\n
+<html><body><h3>The server didn't handle your request.</h3></body></html>
+]]>
+  </sendData>
+</simulation>

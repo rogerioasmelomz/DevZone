@@ -1,0 +1,102 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Indy.Sockets.Core", "Core\Indy.Sockets.Core.csproj", "{330EC759-6500-4D26-B295-AA99E007615B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Indy.Sockets.Mail", "Mail\Indy.Sockets.Mail.csproj", "{49D26B71-35D6-422E-B7BE-2250264EF9C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Indy.Sockets.Protocols", "Protocols\Indy.Sockets.Protocols.csproj", "{27388557-F735-44CF-A229-C18842ED4FA6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Indy.Sockets.Web", "Web\Indy.Sockets.Web.csproj", "{70371DA7-8C01-40AD-8580-35BC8CC62998}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Indy.Sockets.UnitTests.Core", "UnitTests\Core\Indy.Sockets.UnitTests.Core.csproj", "{20C288E3-676F-409E-A975-2110452D355E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Indy.Sockets.UnitTests.Mail", "UnitTests\Mail\Indy.Sockets.UnitTests.Mail.csproj", "{287612D5-99FB-44BC-80C7-3E4D23B857F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Indy.Sockets.UnitTests.Protocols", "UnitTests\Protocols\Indy.Sockets.UnitTests.Protocols.csproj", "{6F172AD9-6155-4417-AD4B-7FBE611479C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Indy.Sockets.UnitTests.Web", "UnitTests\Web\Indy.Sockets.UnitTests.Web.csproj", "{3B2F1C8A-9C17-499B-B3EB-D9C8DEA07EA8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Support files", "Support files", "{C8A54B18-D497-4BD7-8B7C-F3135F0E2376}"
+	ProjectSection(SolutionItems) = preProject
+		build.bat = build.bat
+		DevelopmentBuild.proj = DevelopmentBuild.proj
+		Indy.Sockets.build = Indy.Sockets.build
+		Indy.Sockets.fbz4 = Indy.Sockets.fbz4
+		Indy.Sockets.nunit = Indy.Sockets.nunit
+		IntegrationBuild.build = IntegrationBuild.build
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 9
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs01.codeplex.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Core\\Indy.Sockets.Core.csproj
+		SccProjectName1 = Core
+		SccLocalPath1 = Core
+		SccProjectUniqueName2 = Mail\\Indy.Sockets.Mail.csproj
+		SccProjectName2 = Mail
+		SccLocalPath2 = Mail
+		SccProjectUniqueName3 = Protocols\\Indy.Sockets.Protocols.csproj
+		SccProjectName3 = Protocols
+		SccLocalPath3 = Protocols
+		SccProjectUniqueName4 = Web\\Indy.Sockets.Web.csproj
+		SccProjectName4 = Web
+		SccLocalPath4 = Web
+		SccProjectUniqueName5 = UnitTests\\Core\\Indy.Sockets.UnitTests.Core.csproj
+		SccProjectName5 = UnitTests/Core
+		SccLocalPath5 = UnitTests\\Core
+		SccProjectUniqueName6 = UnitTests\\Mail\\Indy.Sockets.UnitTests.Mail.csproj
+		SccProjectName6 = UnitTests/Mail
+		SccLocalPath6 = UnitTests\\Mail
+		SccProjectUniqueName7 = UnitTests\\Protocols\\Indy.Sockets.UnitTests.Protocols.csproj
+		SccProjectName7 = UnitTests/Protocols
+		SccLocalPath7 = UnitTests\\Protocols
+		SccProjectUniqueName8 = UnitTests\\Web\\Indy.Sockets.UnitTests.Web.csproj
+		SccProjectName8 = UnitTests/Web
+		SccLocalPath8 = UnitTests\\Web
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{330EC759-6500-4D26-B295-AA99E007615B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{330EC759-6500-4D26-B295-AA99E007615B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{330EC759-6500-4D26-B295-AA99E007615B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{330EC759-6500-4D26-B295-AA99E007615B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49D26B71-35D6-422E-B7BE-2250264EF9C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49D26B71-35D6-422E-B7BE-2250264EF9C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49D26B71-35D6-422E-B7BE-2250264EF9C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49D26B71-35D6-422E-B7BE-2250264EF9C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27388557-F735-44CF-A229-C18842ED4FA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27388557-F735-44CF-A229-C18842ED4FA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27388557-F735-44CF-A229-C18842ED4FA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27388557-F735-44CF-A229-C18842ED4FA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70371DA7-8C01-40AD-8580-35BC8CC62998}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70371DA7-8C01-40AD-8580-35BC8CC62998}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70371DA7-8C01-40AD-8580-35BC8CC62998}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70371DA7-8C01-40AD-8580-35BC8CC62998}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20C288E3-676F-409E-A975-2110452D355E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20C288E3-676F-409E-A975-2110452D355E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20C288E3-676F-409E-A975-2110452D355E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20C288E3-676F-409E-A975-2110452D355E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{287612D5-99FB-44BC-80C7-3E4D23B857F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{287612D5-99FB-44BC-80C7-3E4D23B857F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{287612D5-99FB-44BC-80C7-3E4D23B857F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{287612D5-99FB-44BC-80C7-3E4D23B857F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F172AD9-6155-4417-AD4B-7FBE611479C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F172AD9-6155-4417-AD4B-7FBE611479C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F172AD9-6155-4417-AD4B-7FBE611479C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F172AD9-6155-4417-AD4B-7FBE611479C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B2F1C8A-9C17-499B-B3EB-D9C8DEA07EA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B2F1C8A-9C17-499B-B3EB-D9C8DEA07EA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B2F1C8A-9C17-499B-B3EB-D9C8DEA07EA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B2F1C8A-9C17-499B-B3EB-D9C8DEA07EA8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

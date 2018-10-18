@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:19821/Primavera_Accsys.svc?xsd=xsd1" namespace="http://schemas.datacontract.org/2004/07/PRIMAVERA_ACCSYS_WCF" />
+  <xs:element name="Operacao_1_Inscricao">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="nrEstudante" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="nomeCompleto" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="morada" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bairro" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="nrTelefone" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="nrTelefone2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bolsa" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="emailPessoal" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="emailAlternativo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tipoIngresso" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="status" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="observacao" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Operacao_1_InscricaoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/PRIMAVERA_ACCSYS_WCF" minOccurs="0" name="Operacao_1_InscricaoResult" nillable="true" type="q1:PrimaveraResultStructure" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

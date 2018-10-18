@@ -41,7 +41,7 @@ namespace QRCoderDemo
                     using (QRCode qrCode = new QRCode(qrCodeData))
                     {
 
-                        pictureBoxQRCode.BackgroundImage = qrCode.GetGraphic(20, Color.Black, Color.White,
+                        pictureBoxQRCode.BackgroundImage = qrCode.GetGraphic(20, Color.DarkCyan   , Color.White,
                             GetIconBitmap(), (int) iconSize.Value);
 
                          this.pictureBoxQRCode.Size = new System.Drawing.Size(pictureBoxQRCode.Width, pictureBoxQRCode.Height);
