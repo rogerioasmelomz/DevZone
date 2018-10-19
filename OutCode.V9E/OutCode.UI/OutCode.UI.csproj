@@ -53,7 +53,7 @@
     <SignAssembly>true</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyOriginatorKeyFile>OUTCODEUI.pfx</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>devkey.pfx</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -76,7 +76,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="OUTCODEUI.pfx" />
+    <None Include="devkey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Forms\frmParametros.resx">

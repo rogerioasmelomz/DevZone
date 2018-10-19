@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Net;
-using System.Text;
 
 namespace OutCode.Net
 {
-    public class FTP {
+    public class FTP
+    {
 
         private string host = null;
         private string user = null;
@@ -54,6 +52,7 @@ namespace OutCode.Net
                     }
                 }
                 catch (Exception ex) { Console.WriteLine(ex.ToString()); }
+
                 /* Resource Cleanup */
                 localFileStream.Close();
                 ftpStream.Close();
@@ -284,7 +283,8 @@ namespace OutCode.Net
                 /* Store the Raw Response */
                 string directoryRaw = null;
                 /* Read Each Line of the Response and Append a Pipe to Each Line for Easy Parsing */
-                try {
+                try
+                {
                     string fileInfo;
                     while (ftpReader.Peek() != -1)
                     {

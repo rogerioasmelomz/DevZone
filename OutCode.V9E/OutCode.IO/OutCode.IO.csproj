@@ -53,7 +53,7 @@
     <SignAssembly>true</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyOriginatorKeyFile>OUTCODEUI2.pfx</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>devkey.pfx</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -75,8 +75,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="OUTCODEUI.pfx" />
-    <None Include="OUTCODEUI2.pfx" />
+    <None Include="devkey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="stdole">
