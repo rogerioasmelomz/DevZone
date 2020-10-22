@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("OutCode.Entities")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("OUTCODEInterop")]
+[assembly: AssemblyDescription("OUTCODEInterop")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("OutCode.Entities")]
-[assembly: AssemblyCopyright("Copyright ©  2015")]
+[assembly: AssemblyCompany("OUTCODE")]
+[assembly: AssemblyProduct("OUTCODEInterop")]
+[assembly: AssemblyCopyright("Copyright ©  OUTCODE 2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0001.1106.*")]
-[assembly: AssemblyFileVersion("1.0001.1106.2017")]
+[assembly: AssemblyVersion("1.0002.0925.*")]
+[assembly: AssemblyFileVersion("1.0002.0925.2019")]
